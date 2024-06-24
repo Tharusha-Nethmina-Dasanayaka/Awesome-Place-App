@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pages/widgets/reusable/natural_wonder_cards/natural_wonder_image_card.dart';
+import 'package:myapp/pages/widgets/reusable/image_card.dart';
 import 'package:myapp/utils/colors.dart';
 
 class NaturalWonderPage extends StatelessWidget {
@@ -15,29 +15,35 @@ class NaturalWonderPage extends StatelessWidget {
         color: mainNaturalWonderColor,
       ),),
       ),
-      body: const SingleChildScrollView(
+      body:  SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              NaturalWonderImageCard(
+              ImageCard(
                 title: "Nature Wonders Place-1",
                 imageUrl: "Assets/natural1.png",
                 description: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                isConerRounded: false,
+                titleColor: titleNaturalWonderColor,
               ),
-              SizedBox(height: 10,),
-              NaturalWonderImageCard(
+              const SizedBox(height: 10,),
+              ImageCard(
                 title: "Nature Wonders Place-2",
                 imageUrl: "Assets/natural2.png",
                 description: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                isConerRounded: false,
+                titleColor: titleNaturalWonderColor,
               ),
-              SizedBox(height: 10,),
-              NaturalWonderImageCard(
+              const SizedBox(height: 10,),
+              ImageCard(
                 title: "Nature Wonders Place-3",
                 imageUrl: "Assets/natural3.png",
                 description: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                isConerRounded: false,
+                titleColor: titleNaturalWonderColor,
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
             ],
           ),
         ),

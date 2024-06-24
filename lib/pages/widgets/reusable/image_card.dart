@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/utils/colors.dart';
 
-class NaturalWonderImageCard extends StatelessWidget {
+class ImageCard extends StatelessWidget {
   final String title;
   final String description;
   final String imageUrl;
-  const NaturalWonderImageCard({super.key, 
+  final bool isConerRounded;
+  final Color titleColor;
+
+
+  const ImageCard({super.key, 
   required this.title, 
   required this.description, 
-  required this.imageUrl,
+  required this.imageUrl, 
+  required this.isConerRounded, 
+  required this.titleColor,
   });
 
   @override
@@ -19,10 +25,18 @@ class NaturalWonderImageCard extends StatelessWidget {
         Text(title,style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w500,
-          color: titleNaturalWonderColor,
+          color: titleColor,
         ),),
         const SizedBox(height: 10,),
-        Image.asset(imageUrl,
+        isConerRounded ? 
+        ClipRRect(
+          borderRadius: BorderRadius.circular(18),
+          child: Image.asset(imageUrl,
+          width: double.infinity,
+          fit: BoxFit.cover,
+          ),
+        )
+        :Image.asset(imageUrl,
         width: double.infinity,
         fit: BoxFit.cover,
         ),

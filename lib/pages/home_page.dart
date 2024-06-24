@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pages/land_mark.dart';
 import 'package:myapp/pages/natural_wonder_page.dart';
+import 'package:myapp/pages/night_life.dart';
 import 'package:myapp/pages/widgets/reusable/home_page/category_card.dart';
 import 'package:myapp/utils/colors.dart';
 
@@ -76,22 +78,33 @@ class HomePage extends StatelessWidget {
                         categoryTitle:"Natural Wonders",
                         ),
                     ),
-                      const CategoryCard(
-                      categoryBgColor: firstCategoriColor, 
-                      cardWidth: 180, 
-                      categoryTitle:"Nightlife",
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const NightLife()));
+                        },
+                        child: const CategoryCard(
+                        categoryBgColor: firstCategoriColor, 
+                        cardWidth: 180, 
+                        categoryTitle:"Nightlife",
+                        ),
                       ),
                   ],
                 ),
                 const SizedBox(height: 10,),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CategoryCard(
-                      categoryBgColor: secondCategoriColor, 
-                      cardWidth: 180, 
-                      categoryTitle:"Landmarks",
-                      ),
+                    GestureDetector(
+                      onTap: () {
+                        
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> const LandMark()),);
+                      },
+                      child: CategoryCard(
+                        categoryBgColor: secondCategoriColor, 
+                        cardWidth: 180, 
+                        categoryTitle:"Landmarks",
+                        ),
+                    ),
                       CategoryCard(
                       categoryBgColor: secondCategoriColor, 
                       cardWidth: 180, 
