@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pages/booking_page.dart';
+import 'package:myapp/pages/cultural_page.dart';
 import 'package:myapp/pages/land_mark.dart';
 import 'package:myapp/pages/natural_wonder_page.dart';
 import 'package:myapp/pages/night_life.dart';
@@ -105,19 +107,29 @@ class HomePage extends StatelessWidget {
                         categoryTitle:"Landmarks",
                         ),
                     ),
-                      CategoryCard(
-                      categoryBgColor: secondCategoriColor, 
-                      cardWidth: 180, 
-                      categoryTitle:"Cultural",
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const CulturalPage()));
+                        },
+                        child: CategoryCard(
+                        categoryBgColor: secondCategoriColor, 
+                        cardWidth: 180, 
+                        categoryTitle:"Cultural",
+                        ),
                       ),
                   ],
                 ),
                 const SizedBox(height: 10,),
-                const CategoryCard(
-                      categoryBgColor: thirdCategoriColor, 
-                      cardWidth: double.infinity, 
-                      categoryTitle:"Book For A Ride Today!",
-                      ),
+                GestureDetector(
+                  onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const BookingPage()));
+                        },
+                  child: const CategoryCard(
+                        categoryBgColor: thirdCategoriColor, 
+                        cardWidth: double.infinity, 
+                        categoryTitle:"Book For A Ride Today!",
+                        ),
+                ),
                       const SizedBox(height: 20,),
               ],
             ),

@@ -28,11 +28,11 @@ class LandMark extends StatelessWidget {
                ),),
                 const SizedBox(height: 10,),
               
-                const LandMarkCard(title: "Landmarks Place-2", 
+                const LandMarkCard(title: "Landmarks Place-1", 
                 description: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.", 
                 imageUrl: "Assets/land1.png"),
                 const SizedBox(height: 10,),
-                const LandMarkCard(title: "Landmarks Place-1", 
+                const LandMarkCard(title: "Landmarks Place-2", 
                 description: "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.", 
                 imageUrl: "Assets/land2.png"),
             ],
